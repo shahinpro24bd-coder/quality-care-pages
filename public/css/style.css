@@ -1046,6 +1046,10 @@ html, body { max-width: 100%; overflow-x: hidden; }
     .service-detail-guide { padding: 3.75rem 0; }
     .service-detail-guide-card { padding: 1.5rem; }
     .service-detail-note { padding: 1.2rem; }
+    .page-header .animated {
+        animation: none !important;
+        transform: none !important;
+    }
     .service-detail-intro .row {
         margin-right: 0;
         margin-left: 0;
