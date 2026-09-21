@@ -77,21 +77,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "অধ্যাপক ডাঃ এম এ বি সিদ্দিক" },
+      { name: "description", content: "অধ্যাপক ডাঃ এম এ বি সিদ্দিকের বিশেষায়িত সার্জারি সেবা।" },
+      { name: "author", content: "অধ্যাপক ডাঃ এম এ বি সিদ্দিক" },
+      { property: "og:title", content: "অধ্যাপক ডাঃ এম এ বি সিদ্দিক" },
+      { property: "og:description", content: "কোলোরেক্টাল, ব্রেস্ট, এন্ডোল্যাপারোস্কপিক ও ক্যান্সার সার্জারি সেবা।" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
   }),
   shellComponent: RootShell,
@@ -102,7 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="bn">
       <head>
         <HeadContent />
       </head>
