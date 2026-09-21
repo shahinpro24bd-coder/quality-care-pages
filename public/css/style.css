@@ -955,3 +955,95 @@ body {
 
 html, body { max-width: 100%; overflow-x: hidden; }
 .service-detail-intro .wow { visibility: visible !important; }
+
+/*** Service detail information expansion ***/
+.service-detail-guide {
+    padding: 6rem 0;
+    background: var(--bs-white);
+}
+.service-detail-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+.service-detail-guide-card {
+    position: relative;
+    min-height: 100%;
+    padding: 2rem;
+    border: 1px solid var(--site-line);
+    border-radius: 6px;
+    background: var(--site-paper);
+    box-shadow: 0 12px 34px rgba(23, 52, 47, .06);
+}
+.service-detail-guide-number {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.4rem;
+    color: rgba(var(--bs-primary-rgb), .2);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+.service-detail-guide-icon {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.35rem;
+    border: 1px solid rgba(var(--bs-primary-rgb), .38);
+    border-radius: 4px;
+    color: var(--bs-primary);
+    background: rgba(var(--bs-primary-rgb), .08);
+}
+.service-detail-guide-card h3 {
+    margin-bottom: 1.15rem;
+    color: var(--site-ink);
+    font-size: 1.35rem;
+}
+.service-detail-compact-list {
+    display: grid;
+    gap: .9rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.service-detail-compact-list li {
+    display: flex;
+    gap: .65rem;
+    color: var(--bs-secondary);
+    line-height: 1.7;
+}
+.service-detail-compact-list i {
+    flex: 0 0 auto;
+    margin-top: .42rem;
+    color: var(--bs-primary);
+    font-size: .7rem;
+}
+.service-detail-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 1.35rem 1.5rem;
+    border-left: 3px solid var(--site-gold);
+    color: rgba(255, 255, 255, .78);
+    background: var(--site-ink);
+}
+.service-detail-note > i {
+    margin-top: .2rem;
+    color: var(--site-gold);
+    font-size: 1.25rem;
+}
+.service-detail-note strong { display: block; margin-bottom: .25rem; color: var(--bs-white); }
+.service-detail-note p { margin: 0; color: inherit; line-height: 1.7; }
+
+@media (max-width: 991.98px) {
+    .service-detail-guide { padding: 4.5rem 0; }
+    .service-detail-guide-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 767.98px) {
+    .service-detail-guide { padding: 3.75rem 0; }
+    .service-detail-guide-card { padding: 1.5rem; }
+    .service-detail-note { padding: 1.2rem; }
+}
