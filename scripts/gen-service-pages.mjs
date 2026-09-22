@@ -242,7 +242,7 @@ ${points}
 `;
 
   return `${head}</head>
-<body>
+<body class="service-detail-page">
 ${reId(NAV, svc.slug)}
 ${body}
 ${reId(FOOTER, svc.slug)}`;

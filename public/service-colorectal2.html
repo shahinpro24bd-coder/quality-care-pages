@@ -248,7 +248,7 @@ a{color:#bf9456;text-decoration:none}
 
 </style>
 <!--CMS-THEME-END--></head>
-<body>
+<body class="service-detail-page">
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -293,8 +293,17 @@ a{color:#bf9456;text-decoration:none}
         </div>
     </div>
 
+    <nav class="service-detail-jumpbar" aria-label="এই পৃষ্ঠার অংশসমূহ">
+        <div class="container">
+            <a href="#service-overview">সেবার পরিচিতি</a>
+            <a href="#service-details">বিস্তারিত তথ্য</a>
+            <a href="#service-process">চিকিৎসার ধাপ</a>
+            <a href="#service-videos">ভিডিও</a>
+        </div>
+    </nav>
+
     <main>
-    <section class="service-detail-intro">
+    <section class="service-detail-intro" id="service-overview">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
@@ -327,7 +336,7 @@ a{color:#bf9456;text-decoration:none}
     </section>
 
 
-    <section class="service-detail-guide">
+    <section class="service-detail-guide" id="service-details">
         <div class="container">
             <div class="service-detail-heading text-center">
                 <p class="service-detail-eyebrow" data-cms-kind="text">চিকিৎসা সম্পর্কে বিস্তারিত</p>
@@ -361,7 +370,7 @@ a{color:#bf9456;text-decoration:none}
         </div>
     </section>
 
-    <section class="service-detail-care">
+    <section class="service-detail-care" id="service-process">
         <div class="container">
             <div class="service-detail-heading text-center">
                 <p class="service-detail-eyebrow" data-cms-id="service-colorectal-218" data-cms-kind="text">রোগী-কেন্দ্রিক সেবা</p>
@@ -407,7 +416,7 @@ a{color:#bf9456;text-decoration:none}
         </div>
     </section>
 
-    <section class="service-detail-videos">
+    <section class="service-detail-videos" id="service-videos">
         <div class="container">
             <div class="service-detail-heading text-center">
                 <p class="service-detail-eyebrow" data-cms-id="service-colorectal-231" data-cms-kind="text">ভিডিও লাইব্রেরি</p>

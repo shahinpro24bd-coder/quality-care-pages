@@ -1059,3 +1059,296 @@ html, body { max-width: 100%; overflow-x: hidden; }
         padding-left: 0;
     }
 }
+
+/*** 2026 specialist service experience ***/
+body.service-detail-page {
+    --service-ink: #123b34;
+    --service-ink-soft: #24534a;
+    --service-paper: #fcfbf7;
+    --service-surface: #ffffff;
+    --service-sage: #edf3ef;
+    --service-gold: #bf9456;
+    --service-line: rgba(18, 59, 52, .14);
+    --service-muted: #60716d;
+    color: var(--service-ink);
+    background: var(--service-paper);
+}
+body.service-detail-page .page-header {
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0 !important;
+    isolation: isolate;
+    background-position: center 32%;
+}
+body.service-detail-page .page-header::before {
+    background: rgba(12, 45, 39, .82);
+}
+body.service-detail-page .page-header::after {
+    content: "";
+    position: absolute;
+    inset: 20px;
+    z-index: -1;
+    border: 1px solid rgba(255, 255, 255, .2);
+    pointer-events: none;
+}
+body.service-detail-page .page-header .container { position: relative; z-index: 1; }
+body.service-detail-page .page-header h1 {
+    max-width: 960px;
+    margin-inline: auto;
+    color: var(--bs-white);
+    font-size: clamp(2.7rem, 5vw, 5rem);
+    line-height: 1.08;
+}
+body.service-detail-page .page-header .breadcrumb { margin-top: 1.35rem; }
+body.service-detail-page .page-header .breadcrumb-item,
+body.service-detail-page .page-header .breadcrumb-item.active { color: rgba(255, 255, 255, .82); }
+
+.service-detail-jumpbar {
+    position: relative;
+    z-index: 3;
+    border-bottom: 1px solid var(--service-line);
+    background: rgba(252, 251, 247, .96);
+    box-shadow: 0 10px 28px rgba(18, 59, 52, .05);
+}
+.service-detail-jumpbar .container {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.25rem;
+}
+.service-detail-jumpbar a {
+    position: relative;
+    padding: 1.65rem 0 1.4rem;
+    color: var(--service-muted);
+    font-weight: 600;
+}
+.service-detail-jumpbar a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    background: var(--service-gold);
+    transform: scaleX(0);
+    transition: transform .25s ease;
+}
+.service-detail-jumpbar a:hover { color: var(--service-ink); }
+.service-detail-jumpbar a:hover::after { transform: scaleX(1); }
+
+body.service-detail-page .service-detail-intro { padding: 7.5rem 0; }
+body.service-detail-page .service-detail-intro .row { --bs-gutter-x: 5.5rem; }
+body.service-detail-page .service-detail-portrait {
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 30px 70px rgba(18, 59, 52, .14);
+}
+body.service-detail-page .service-detail-portrait::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, .55);
+    pointer-events: none;
+}
+body.service-detail-page .service-detail-portrait > img.service-clinical-image {
+    min-height: 500px;
+    aspect-ratio: 4 / 5;
+}
+body.service-detail-page .service-detail-doctor-strip {
+    position: relative;
+    z-index: 2;
+    padding: 1.55rem 1.75rem;
+    border-top: 3px solid var(--service-gold);
+    background: var(--service-ink);
+}
+body.service-detail-page .service-detail-doctor-strip p { font-size: 1rem; line-height: 1.8; }
+body.service-detail-page .service-detail-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--service-gold);
+    color: var(--service-gold);
+    background: transparent;
+}
+body.service-detail-page .service-detail-eyebrow {
+    margin-bottom: 1rem;
+    color: var(--service-gold);
+    font-size: .82rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+body.service-detail-page .service-detail-intro h2 {
+    max-width: 650px;
+    margin-bottom: 1.2rem;
+    font-size: clamp(2.2rem, 4vw, 3.65rem);
+    line-height: 1.18;
+}
+body.service-detail-page .service-detail-lead {
+    max-width: 64ch;
+    margin-bottom: 1.8rem;
+    color: var(--service-muted);
+    font-size: 1.12rem;
+    line-height: 1.9;
+}
+body.service-detail-page .service-detail-list { gap: 0; border-top: 1px solid var(--service-line); }
+body.service-detail-page .service-detail-list li {
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--service-line);
+    font-weight: 500;
+}
+body.service-detail-page .service-detail-list i {
+    width: 22px;
+    height: 22px;
+    flex-basis: 22px;
+    border-radius: 2px;
+    color: var(--service-ink);
+    background: var(--service-gold);
+}
+body.service-detail-page .service-detail-actions .btn,
+body.service-detail-page .service-detail-appointment .btn {
+    border-radius: 2px !important;
+    font-weight: 700;
+    box-shadow: 0 12px 28px rgba(18, 59, 52, .12);
+}
+
+body.service-detail-page .service-detail-guide {
+    padding: 7rem 0;
+    border-block: 1px solid var(--service-line);
+    background: var(--service-sage);
+}
+body.service-detail-page .service-detail-heading { max-width: 820px; margin-bottom: 4rem; }
+body.service-detail-page .service-detail-heading h2 {
+    font-size: clamp(2rem, 3.6vw, 3.35rem);
+    line-height: 1.22;
+}
+body.service-detail-page .service-detail-guide-grid {
+    position: relative;
+    gap: 0;
+    border-top: 1px solid var(--service-line);
+    border-bottom: 1px solid var(--service-line);
+}
+body.service-detail-page .service-detail-guide-card {
+    padding: 2.6rem 2.4rem 2.8rem;
+    border: 0;
+    border-right: 1px solid var(--service-line);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    transition: background-color .25s ease, transform .25s ease;
+}
+body.service-detail-page .service-detail-guide-card:last-child { border-right: 0; }
+body.service-detail-page .service-detail-guide-card:hover {
+    z-index: 1;
+    background: var(--service-surface);
+    transform: translateY(-6px);
+}
+body.service-detail-page .service-detail-guide-number {
+    top: 2.4rem;
+    right: 2.4rem;
+    color: rgba(18, 59, 52, .12);
+    font-size: 3.5rem;
+    font-family: Georgia, serif;
+}
+body.service-detail-page .service-detail-guide-icon {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 2px;
+    color: var(--service-paper);
+    background: var(--service-ink);
+}
+body.service-detail-page .service-detail-guide-card h3 { font-size: 1.55rem; }
+body.service-detail-page .service-detail-note {
+    margin-top: 2.5rem;
+    padding: 1.7rem 2rem;
+    border-left-width: 5px;
+    background: var(--service-ink);
+}
+
+body.service-detail-page .service-detail-care { padding: 7rem 0; background: var(--service-paper); }
+body.service-detail-page .service-detail-steps { position: relative; }
+body.service-detail-page .service-detail-step {
+    padding: 2.4rem;
+    border: 1px solid var(--service-line);
+    border-radius: 2px;
+    background: var(--service-surface);
+    box-shadow: none;
+}
+body.service-detail-page .service-detail-step:hover {
+    border-color: var(--service-gold);
+    box-shadow: 0 22px 48px rgba(18, 59, 52, .09);
+}
+body.service-detail-page .service-detail-step > span {
+    color: rgba(191, 148, 86, .2);
+    font-size: 3.2rem;
+    font-family: Georgia, serif;
+}
+body.service-detail-page .service-detail-step > i { color: var(--service-gold); }
+
+body.service-detail-page .service-detail-appointment { padding: 0 0 7rem; background: var(--service-paper); }
+body.service-detail-page .service-detail-appointment-inner {
+    position: relative;
+    padding: 3.5rem 4rem;
+    overflow: hidden;
+    border-radius: 2px;
+    background: var(--service-ink);
+}
+body.service-detail-page .service-detail-appointment-inner::after {
+    content: "+";
+    position: absolute;
+    right: 2rem;
+    bottom: -5.7rem;
+    color: rgba(255, 255, 255, .05);
+    font-size: 17rem;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    pointer-events: none;
+}
+body.service-detail-page .service-detail-appointment-inner > * { position: relative; z-index: 1; }
+body.service-detail-page .service-detail-videos {
+    padding: 7rem 0;
+    border-top: 1px solid var(--service-line);
+    background: var(--service-surface);
+}
+body.service-detail-page .cms-video-empty {
+    border: 1px dashed var(--service-line);
+    color: var(--service-muted);
+    background: var(--service-paper);
+}
+
+@media (max-width: 991.98px) {
+    .service-detail-jumpbar { overflow-x: auto; }
+    .service-detail-jumpbar .container { width: max-content; min-width: 100%; padding-inline: 1.5rem; justify-content: flex-start; }
+    body.service-detail-page .service-detail-intro,
+    body.service-detail-page .service-detail-guide,
+    body.service-detail-page .service-detail-care,
+    body.service-detail-page .service-detail-videos { padding: 5rem 0; }
+    body.service-detail-page .service-detail-intro .row { --bs-gutter-x: 1.5rem; --bs-gutter-y: 3.5rem; }
+    body.service-detail-page .service-detail-portrait > img.service-clinical-image { min-height: 0; aspect-ratio: 5 / 4; }
+    body.service-detail-page .service-detail-guide-card { border-right: 0; border-bottom: 1px solid var(--service-line); }
+    body.service-detail-page .service-detail-guide-card:last-child { border-bottom: 0; }
+    body.service-detail-page .service-detail-appointment { padding-bottom: 5rem; }
+}
+
+@media (max-width: 767.98px) {
+    body.service-detail-page .page-header { min-height: 285px; }
+    body.service-detail-page .page-header::after { inset: 10px; }
+    body.service-detail-page .page-header h1 { font-size: 2.35rem; }
+    .service-detail-jumpbar .container { gap: 1.4rem; min-height: 62px; }
+    .service-detail-jumpbar a { padding: 1.25rem 0 1.05rem; white-space: nowrap; font-size: .9rem; }
+    body.service-detail-page .service-detail-intro,
+    body.service-detail-page .service-detail-guide,
+    body.service-detail-page .service-detail-care,
+    body.service-detail-page .service-detail-videos { padding: 4rem 0; }
+    body.service-detail-page .service-detail-intro h2 { font-size: 2.2rem; }
+    body.service-detail-page .service-detail-guide-card,
+    body.service-detail-page .service-detail-step { padding: 1.7rem; }
+    body.service-detail-page .service-detail-heading { margin-bottom: 2.5rem; }
+    body.service-detail-page .service-detail-appointment { padding-bottom: 4rem; }
+    body.service-detail-page .service-detail-appointment-inner { padding: 2.3rem 1.5rem; }
+}
