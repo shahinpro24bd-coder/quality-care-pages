@@ -149,8 +149,17 @@ function build(svc) {
         </div>
     </header>
 
+    <nav class="service-detail-jumpbar" aria-label="এই পৃষ্ঠার অংশসমূহ">
+        <div class="container">
+            <a href="#service-overview">সেবার পরিচিতি</a>
+            <a href="#service-details">বিস্তারিত তথ্য</a>
+            <a href="#service-process">চিকিৎসার ধাপ</a>
+            <a href="#service-videos">ভিডিও</a>
+        </div>
+    </nav>
+
     <main>
-    <section class="service-detail-intro">
+    <section class="service-detail-intro" id="service-overview">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
@@ -181,7 +190,7 @@ ${points}
         </div>
     </section>
 
-    <section class="service-detail-care">
+    <section class="service-detail-care" id="service-process">
         <div class="container">
             <div class="service-detail-heading text-center">
                 <p class="service-detail-eyebrow" data-cms-id="${id()}" data-cms-kind="text">রোগী-কেন্দ্রিক সেবা</p>
@@ -227,7 +236,7 @@ ${points}
         </div>
     </section>
 
-    <section class="service-detail-videos">
+    <section class="service-detail-videos" id="service-videos">
         <div class="container">
             <div class="service-detail-heading text-center">
                 <p class="service-detail-eyebrow" data-cms-id="${id()}" data-cms-kind="text">ভিডিও লাইব্রেরি</p>
