@@ -6,7 +6,19 @@ import fs from "node:fs";
 import path from "node:path";
 
 const PUBLIC_DIR = path.resolve("public");
-const PAGES = ["index", "about", "service", "gallery", "contact"];
+const PAGES = [
+  "index",
+  "about",
+  "service",
+  "gallery",
+  "contact",
+  "service-cancer",
+  "service-laparoscopic",
+  "service-breast",
+  "service-colorectal",
+  "service-endoscopy",
+  "service-general",
+];
 
 const SKIP_TAGS = new Set(["SCRIPT", "STYLE", "NOSCRIPT", "HEAD", "META", "LINK", "TITLE", "SVG", "PATH"]);
 const ICON_ONLY = /^(I|SVG)$/;
@@ -91,14 +103,15 @@ function annotate(html, page) {
 
 function injectScripts(html, page, editor) {
   const tags = [
-    `<script>window.CMS_PAGE=${JSON.stringify(page)};</script>`,
-    `<script src="/cms/cms-theme.js"></script>`,
-    `<script src="/cms/cms-content.js"></script>`,
-    editor ? `<script src="/cms/cms-fonts.js"></script>` : "",
-    editor ? `<script src="/cms/cms-editor.js"></script>` : "",
+    html.includes("window.CMS_PAGE=") ? "" : `<script>window.CMS_PAGE=${JSON.stringify(page)};</script>`,
+    html.includes('/cms/cms-theme.js') ? "" : `<script src="/cms/cms-theme.js"></script>`,
+    html.includes('/cms/cms-content.js') ? "" : `<script src="/cms/cms-content.js"></script>`,
+    editor && !html.includes('/cms/cms-fonts.js') ? `<script src="/cms/cms-fonts.js"></script>` : "",
+    editor && !html.includes('/cms/cms-editor.js') ? `<script src="/cms/cms-editor.js"></script>` : "",
   ]
     .filter(Boolean)
     .join("\n");
+  if (!tags) return html;
   if (html.includes("</body>")) return html.replace("</body>", `${tags}\n</body>`);
   return html + tags;
 }
