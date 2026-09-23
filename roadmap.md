@@ -1,5 +1,5 @@
 # Roadmap
 
-- [ ] Make every service-detail page text and image editable
-- [ ] Remove all visible Lovable names, logos, and icons site-wide
-- [ ] Verify desktop and mobile pages
+- [x] Make every service-detail page text and image editable
+- [x] Remove all visible Lovable names, logos, and icons site-wide
+- [x] Verify desktop and mobile pages
