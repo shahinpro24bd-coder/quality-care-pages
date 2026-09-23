@@ -125,7 +125,16 @@ function build(svc) {
     )
     .join("\n");
 
-  const head = HEAD.replace('window.CMS_PAGE="service"', `window.CMS_PAGE="${svc.slug}"`).replace(
+  const head = HEAD.replace('window.CMS_PAGE="service"', `window.CMS_PAGE="${svc.slug}"`)
+    .replace(
+      '<link  rel="icon">',
+      '<link rel="icon" type="image/png" href="favicon.png">',
+    )
+    .replace(
+      '<link rel="preconnect" href="https://fonts.googleapis.com">',
+      '<link rel="preconnect" href="https://fonts.googleapis.com">\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600;700&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">',
+    )
+    .replace(
     /<title>[\s\S]*?<\/title>/,
     `<title>${svc.title} | অধ্যাপক ডাঃ এম এ বি সিদ্দিক</title>`,
   ).replace(

@@ -1321,6 +1321,35 @@ body.service-detail-page .cms-video-empty {
     background: var(--service-paper);
 }
 
+/* Keep service detail typography identical to the home page. */
+body.service-detail-page,
+body.service-detail-page p,
+body.service-detail-page a,
+body.service-detail-page li,
+body.service-detail-page span,
+body.service-detail-page .btn,
+body.service-detail-page .nav-link {
+    font-family: "Hind Siliguri", sans-serif !important;
+    letter-spacing: 0;
+}
+body.service-detail-page h1,
+body.service-detail-page h2,
+body.service-detail-page h3,
+body.service-detail-page h4,
+body.service-detail-page h5,
+body.service-detail-page h6,
+body.service-detail-page .navbar-brand,
+body.service-detail-page .footer .navbar-brand {
+    font-family: "Noto Serif Bengali", serif !important;
+    letter-spacing: 0;
+}
+body.service-detail-page .fas,
+body.service-detail-page .fab,
+body.service-detail-page .far,
+body.service-detail-page .bi {
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome" !important;
+}
+
 @media (max-width: 991.98px) {
     .service-detail-jumpbar { overflow-x: auto; }
     .service-detail-jumpbar .container { width: max-content; min-width: 100%; padding-inline: 1.5rem; justify-content: flex-start; }
