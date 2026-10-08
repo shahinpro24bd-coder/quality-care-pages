@@ -513,63 +513,11 @@
     panel = document.createElement("div");
     panel.className = "cms-panel";
     panel.innerHTML =
-      '<h4>\u09ab\u09a8\u09cd\u099f (Font)</h4>' +
-      '<input type="search" id="cms-font-q" placeholder="Search font...">' +
-      '<div class="cms-fontlist" id="cms-fontlist"></div>' +
-      '<h4>\u09a5\u09bf\u09ae \u0995\u09be\u09b2\u09be\u09b0 (Theme colour)</h4>' +
-      '<div class="cms-swatches" id="cms-swatches"></div>';
+      '<h4>\u09a5\u09bf\u09ae \u09b8\u09cd\u09a5\u09bf\u09b0 (Theme locked)</h4>' +
+      '<p style="margin:0;font-size:13px;color:#555;line-height:1.7">' +
+      '\u0993\u09df\u09c7\u09ac\u09b8\u09be\u0987\u099f\u09c7\u09b0 \u09ae\u09c2\u09b2 \u0995\u09be\u09b2\u09be\u09b0 \u0993 \u09ab\u09a8\u09cd\u099f \u09b8\u09cd\u09a5\u09be\u09df\u09c0\u09ad\u09be\u09ac\u09c7 \u09b2\u0995 \u0995\u09b0\u09be \u0986\u099b\u09c7\u0964 ' +
+      '\u098f\u0996\u09be\u09a8 \u09a5\u09c7\u0995\u09c7 \u098f\u0997\u09c1\u09b2\u09cb \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8 \u0995\u09b0\u09be \u09af\u09be\u09df \u09a8\u09be, \u09af\u09be\u09a4\u09c7 \u09b8\u09be\u0987\u099f\u09c7\u09b0 \u09a1\u09bf\u099c\u09be\u0987\u09a8 \u0995\u0996\u09a8\u0993 \u09a8\u09bf\u099c\u09c7 \u09a8\u09bf\u099c\u09c7 \u09ac\u09a6\u09b2\u09c7 \u09a8\u09be \u09af\u09be\u09df\u0964</p>';
     document.body.appendChild(panel);
-
-    var list = panel.querySelector("#cms-fontlist");
-    var fonts = window.CMS_FONTS || [];
-    var selectedFont = settings.font || current.font || "";
-
-    function renderFonts(q) {
-      list.innerHTML = "";
-      fonts
-        .filter(function (f) {
-          return !q || f.toLowerCase().indexOf(q.toLowerCase()) >= 0;
-        })
-        .forEach(function (f) {
-          var d = document.createElement("div");
-          d.className = "cms-fontitem" + (f === selectedFont ? " sel" : "");
-          d.textContent = f;
-          d.style.fontFamily = "'" + f + "', sans-serif";
-          d.onclick = function () {
-            selectedFont = f;
-            settings.font = f;
-            previewFont(f);
-            renderFonts(panel.querySelector("#cms-font-q").value);
-            updateBar();
-          };
-          list.appendChild(d);
-        });
-    }
-    renderFonts("");
-    panel.querySelector("#cms-font-q").oninput = function () {
-      renderFonts(this.value);
-    };
-
-    var sw = panel.querySelector("#cms-swatches");
-    var selectedColor = settings.color || current.color || (window.CMS_THEME && window.CMS_THEME.baseColor);
-    (window.CMS_COLORS || []).forEach(function (c) {
-      var b = document.createElement("div");
-      b.className = "cms-sw" + (c.toLowerCase() === String(selectedColor).toLowerCase() ? " sel" : "");
-      b.style.background = c;
-      b.title = c;
-      b.setAttribute("data-cms-color", c);
-      b.onclick = function () {
-        selectedColor = c;
-        settings.color = c;
-        previewColor(c);
-        Array.prototype.forEach.call(sw.children, function (n) {
-          n.classList.remove("sel");
-        });
-        b.classList.add("sel");
-        updateBar();
-      };
-      sw.appendChild(b);
-    });
   }
 
   /* ---------- YouTube video manager (only on the 2.html edit copies) ----- */

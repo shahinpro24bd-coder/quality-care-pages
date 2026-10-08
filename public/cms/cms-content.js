@@ -81,7 +81,10 @@
 
   function applySettings(s) {
     window.CMS_SETTINGS = s;
-    if (window.CMS_THEME) window.CMS_THEME.apply(s);
+    /* Theme colour and font are LOCKED to the site's source design.
+       Saved values are still shared with the editor panel (cms:settings),
+       but they are never applied to live pages — so the site's colours,
+       fonts and look can never change on their own. */
   }
 
   function save(key, value) {
