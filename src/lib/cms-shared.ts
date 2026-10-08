@@ -28,7 +28,7 @@ export function supabaseKey(): string {
 }
 
 export function dbSecret(): string {
-  return clean(process.env["CMS_DB_SECRET"]) || "lovable-cms-db-secret-2026";
+  return clean(process.env["CMS_DB_SECRET"]) || "clinic-cms-db-secret-2026";
 }
 
 export function adminUser(): string {
