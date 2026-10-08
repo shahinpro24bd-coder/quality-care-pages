@@ -140,6 +140,9 @@ function build(svc) {
   ).replace(
     /<meta\s+content="[^"]*"\s+name="description">/,
     `<meta content="অধ্যাপক ডাঃ এম এ বি সিদ্দিকের তত্ত্বাবধানে ${svc.title}—রোগ নির্ণয়, আধুনিক অস্ত্রোপচার ও ফলো-আপ সেবা সম্পর্কে বিস্তারিত জানুন।" name="description">\n    <meta property="og:title" content="${svc.title} | অধ্যাপক ডাঃ এম এ বি সিদ্দিক">\n    <meta property="og:description" content="${svc.title}—বিশেষজ্ঞ পরামর্শ, আধুনিক চিকিৎসা ও সার্জারি সেবা।">\n    <meta property="og:type" content="website">\n    <meta name="twitter:card" content="summary">`,
+  ).replace(
+    /<meta\s+content="[^"]*"\s+name="keywords">/,
+    `<meta content="অধ্যাপক ডাঃ এম এ বি সিদ্দিক, ${svc.title}, কোলোরেক্টাল সার্জন, ব্রেস্ট সার্জন, এন্ডোল্যাপারোস্কপিক সার্জন, ক্যান্সার সার্জন, গাজীপুর, ঢাকা" name="keywords">`,
   );
 
   const body = `
